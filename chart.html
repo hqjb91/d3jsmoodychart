@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+		<script src="https://d3js.org/d3.v5.min.js"></script>
+		<script src="datatb.js"></script>
+		<script src="moodychartscript.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css">
+
+		<style>
+            		.laminarline {
+                		fill: none;
+                		stroke:navy;
+                		stroke-width:1px;
+                	}
+
+            		.turbulentline {
+                		fill: none;
+                		stroke:navy;
+                		stroke-width:1px;
+                	}
+
+                	label {
+                		display: inline-block;
+                		float: left;
+                		clear: left;
+                		width: 200px;
+                		text-align: left;
+                		font-size: 10px;
+                		font-weight: normal;
+                	}
+
+            		input {
+                		display: inline-block;
+                		float: left;
+                		width: 100px;
+                		height: 15px;
+                		font-size: 10px;
+            		}
+
+            		.btn {
+                		display: inline-block;
+                		float:left;
+                		clear: left;
+                		margin-top: 10px;
+                		font-size: 10px;
+                		padding: 3px;
+            		}
+                
+		</style>
+    </head>
+
+    <body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" id="moodychart"><p>Moody Diagram</p></div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                        
+                            <label>Inputs : </label>
+
+                            <label>Reynolds Number, Re </label> <input type="text" id="reynoldsnum">
+
+                            <label>Hydraulic Diameter, Dh (m) </label> <input type="text" id="hydraulicdiameter">
+
+                            <label>Absolute Roughness, k (m) </label> <input type="text" id="absroughness">
+
+                            <button type="button" class="btn btn-default" onclick="moodyCalc()"> Calculate </button>
+                            <button type="button" class="btn btn-default" onclick="clearCalc()" style="margin-bottom:20px;"> Reset </button>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                        <label>Results : </label>
+
+                            <label>Darcy's Friction Factor, f </label> <input type="text" id="frictionfactor"> 
+
+                            <label>Relative Roughness, k/Dh </label> <input type="text" id="relroughness" style="margin-bottom:20px;"> <br />
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+   
+    </body>
+</html>
